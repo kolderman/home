@@ -1,0 +1,358 @@
+{
+ "id": "OFFICE-SWAP",
+ "title": "Suite takes the office slot; bedroom faces the pond, 27 ft from the island",
+ "strategy": "Swap two rooms inside the walls we already have. The office's spot (68-86) already sits on the house's back line, starts right where the great room ends, and looks at the pond. The primary bedroom moves there behind a small foyer, and the office moves into today's primary bedroom. Melissa's bath and dressing room stay where they are and are now entered from the side of the bedroom.",
+ "proposal": "The footprint and roof stay the same. All changes are inside today's walls.\n- FOYER 68-78 x 27-34 (10'x7'). You enter through today's office door (x 68.5-71.5 on the hall), right where the hall leaves the kitchen. It has a morning bar (coffee, fridge drawers) on the x 78 wall and a small bench. A 3 ft pocket door at x 70-73 on y 27 leads into the bedroom.\n- PRIMARY BEDROOM 68-86 x 5-27 (18'x22', 396 sf). The back wall (y 5, x 69-85) becomes a 16 ft multi-slide glass wall onto a private garden. A small corner glass at x 68 (y 5.5-8, kept below the outdoor-kitchen eave) lines up with the falls. The king bed's head is on the foyer wall, so the bed faces the pond. The sitting area is at the glass. The x 68 wall stays a double-stud sound wall.\n- DRESSING ROOM 86-106 x 8-16 and BATH 86-106 x -2.5..8 stay as drawn. They get a new 3 ft opening from the bedroom (x 86, y 10.5-13.5) and a pocket door from the bedroom straight into the bath (x 86, y 5.3-7.8). The old opening from the bedroom to the dressing room at x 87-90 on y 16 is walled in, and the mirror stays on the x 86 end.\n- POWDER ROOM 78-86 x 27-34. It gets its own hall door (x 80.5-83). The WC goes on the far x 86 wall, and nothing is plumbed on the headboard wall. The y 27 wall is staggered-stud with mineral wool.\n- OFFICE moves to 86-106 x 16-32 (20'x16'). It keeps the same pieces: the L couch along the back wall with its return on the west end facing the TV, which goes on the x 106 wall (y 20-26) about 16 ft away. The U desk sits at the front, and the door stays at x 87-90 on y 32. All four walls are sound-isolated. The side porch becomes his porch through a 3 ft glass door.\n- PRIVATE GARDEN 64-86 x -6..5. It has a screen at x 64, 6 ft high from y 3 to 10 and dropping to 42 in from y -6 to 3 so the falls line stays open. There is NO wall on the pond side, only planting 18 in or lower, so the water stays visible from the bed.\n- The bath can still be pushed back later (study option B), or the closet and bath rebuilt as a 270 sf closet plus a 200 sf bath (back wall at y -7.5) if Melissa wants more closet.",
+ "walk_from_kitchen_ft": 27,
+ "walk_from_garage_ft": 31,
+ "corridor_ft": 2,
+ "view": "The bed (78,23) looks straight down the room through 16 ft of glass. Water today is about 30 ft away, and the planned quiet cove is 31 ft or more. The falls are about 76 ft away, seen through the small corner glass at x 68 (the line crosses at y 7.2). From the sitting area (73,8.5), water is about 15 ft and the falls about 61 ft, straight out through the back glass. Today the bedroom has no pond view at all.",
+ "privacy": "Medium-good. The glass faces a walled private garden, not the party terrace. The party terrace stops at about x 64, and its last 5 ft beside the outdoor kitchen is taken into the garden behind a 6 ft screen. Use motorized sheers on the corner glass. The outdoor-kitchen U currently sits on this wall, so the grill must move to the x 46 end (or this leg becomes a cold bar). Guests pass a solid suite door into a foyer, never the bedroom. The garage door now faces the office, not the bed.",
+ "footprint_change_sqft": 0,
+ "roof_impact": "None. The 'Office and primary' hip and the 'Primary bath' hip are unchanged. The 16 ft slider at y 5 needs an engineered header under the 11 ft plate. Optionally, add a 6 ft low shed canopy over the glass for shade, since north is unknown. The bedroom can have a tray or partial vault.",
+ "pond_terrace_impact": "The bedroom wall at y 5 is about 11 ft from today's swim water, so it passes the 5 ft rule with no pond change. But swimmers would be 11 ft from the bed, so the new pond shape should end the swim basin west of about x 60. Put quiet lily or wetland water behind the suite, with its shore at y -8 or further back, and no swim access from the garden. The party terrace keeps x 12-64.",
+ "what_else_moves": "Office moves to today's primary bedroom (320 sf against about 456 sf today; it loses its three pond windows and the 'office door across from the stairs'). The powder room moves to 78-86 x 27-34 with its own hall door. The outdoor-kitchen grill moves off the x 68 wall. The suite is now about 22 ft from the laundry. The garage, stair, under-stair closet, server room and bedroom wing do not change.",
+ "tradeoffs": "For: it fixes both of Melissa's points for the least money. The walk is about 27 ft from the island (19 ft to the suite's own door), against 40 today, with essentially no corridor. The bedroom is truly on the pond, there is no roof or footprint change, and Melissa's bath stays as drawn. Against: Michael's office gets about 30% smaller and trades its pond view for the side porch. The dressing room is still the 20'x8' strip until option B is added. The bedroom shares walls with the dining room, the outdoor kitchen and the powder room, so it needs good sound walls. The garage walk grows from 8 ft to about 31 ft.",
+ "conflicts_with_decisions": "It MOVES THE OFFICE, which is a firm decision, so it needs Michael's OK. The layout is kept but in a smaller room, and the office entry is no longer across from the stairs. The powder room moves (option A finishes kept). The outdoor-kitchen U moves. Garage, server room, range behind island, 16 ft glass wall, roof rules, no wet room, no closet island and Melissa's bath are all respected.",
+ "value": "high",
+ "cost": "low",
+ "view_box": [
+  44,
+  -14,
+  112,
+  52
+ ],
+ "rooms": [
+  {
+   "name": "Primary bedroom",
+   "kind": "room",
+   "x1": 68,
+   "y1": 5,
+   "x2": 86,
+   "y2": 27
+  },
+  {
+   "name": "Foyer",
+   "kind": "room",
+   "x1": 68,
+   "y1": 27,
+   "x2": 78,
+   "y2": 34
+  },
+  {
+   "name": "Powder",
+   "kind": "room",
+   "x1": 78,
+   "y1": 27,
+   "x2": 86,
+   "y2": 34
+  },
+  {
+   "name": "Dressing",
+   "kind": "room",
+   "x1": 86,
+   "y1": 8,
+   "x2": 106,
+   "y2": 16
+  },
+  {
+   "name": "Bath",
+   "kind": "room",
+   "x1": 86,
+   "y1": -2.5,
+   "x2": 106,
+   "y2": 8
+  },
+  {
+   "name": "Private garden",
+   "kind": "ext",
+   "x1": 64,
+   "y1": -6,
+   "x2": 86,
+   "y2": 5
+  },
+  {
+   "name": "Garden screen strip",
+   "kind": "ext",
+   "x1": 64,
+   "y1": 5,
+   "x2": 68,
+   "y2": 10
+  },
+  {
+   "name": "Office",
+   "x1": 86,
+   "y1": 16,
+   "x2": 112,
+   "y2": 32,
+   "kind": "room"
+  },
+  {
+   "name": "Workstation",
+   "x1": 102.5,
+   "y1": 16,
+   "x2": 112,
+   "y2": 23.5,
+   "kind": "open",
+   "nolabel": true
+  },
+  {
+   "name": "Laundry stoop",
+   "x1": 106,
+   "y1": 32,
+   "x2": 112,
+   "y2": 40,
+   "kind": "ext"
+  }
+ ],
+ "fixtures": [
+  {
+   "label": "King bed",
+   "x1": 75,
+   "y1": 20,
+   "x2": 81.8,
+   "y2": 27
+  },
+  {
+   "label": "Nightstand",
+   "x1": 73.1,
+   "y1": 25.2,
+   "x2": 74.9,
+   "y2": 27
+  },
+  {
+   "label": "Nightstand",
+   "x1": 81.9,
+   "y1": 25.2,
+   "x2": 83.7,
+   "y2": 27
+  },
+  {
+   "label": "Sitting area",
+   "x1": 69,
+   "y1": 6,
+   "x2": 77,
+   "y2": 11
+  },
+  {
+   "label": "Dresser",
+   "x1": 84.2,
+   "y1": 15.5,
+   "x2": 85.8,
+   "y2": 21
+  },
+  {
+   "label": "Morning bar",
+   "x1": 76.2,
+   "y1": 28,
+   "x2": 77.8,
+   "y2": 33.5
+  },
+  {
+   "label": "Bench",
+   "x1": 68.2,
+   "y1": 28,
+   "x2": 69.6,
+   "y2": 30.8
+  },
+  {
+   "label": "Powder vanity",
+   "x1": 78.2,
+   "y1": 28.5,
+   "x2": 79.8,
+   "y2": 32
+  },
+  {
+   "label": "Powder WC",
+   "x1": 84,
+   "y1": 31,
+   "x2": 85.8,
+   "y2": 33
+  },
+  {
+   "label": "Screen wall",
+   "x1": 64,
+   "y1": -6,
+   "x2": 64.7,
+   "y2": 10
+  },
+  {
+   "label": "Desk",
+   "x1": 103.5,
+   "y1": 16.2,
+   "x2": 111.8,
+   "y2": 18.8
+  },
+  {
+   "label": "Desk return",
+   "short": "Desk",
+   "x1": 109.3,
+   "y1": 18.8,
+   "x2": 111.8,
+   "y2": 21.4
+  },
+  {
+   "label": "Desk chair",
+   "short": "Chair",
+   "x1": 106,
+   "y1": 19.3,
+   "x2": 108,
+   "y2": 21.3
+  },
+  {
+   "label": "L couch",
+   "x1": 91.5,
+   "y1": 20.5,
+   "x2": 101.5,
+   "y2": 23.5
+  },
+  {
+   "label": "Couch return",
+   "short": "Couch",
+   "x1": 101.5,
+   "y1": 20.5,
+   "x2": 104.5,
+   "y2": 26
+  },
+  {
+   "label": "Lounge chair",
+   "short": "Chair",
+   "x1": 87.6,
+   "y1": 19.8,
+   "x2": 90.6,
+   "y2": 22.8
+  },
+  {
+   "label": "Lounge chair",
+   "short": "Chair",
+   "x1": 87.6,
+   "y1": 23.6,
+   "x2": 90.6,
+   "y2": 26.6
+  },
+  {
+   "label": "Coffee table",
+   "short": "Table",
+   "x1": 93.5,
+   "y1": 24.4,
+   "x2": 99.5,
+   "y2": 27
+  },
+  {
+   "label": "Media console",
+   "short": "Console",
+   "x1": 92.5,
+   "y1": 30.3,
+   "x2": 101.5,
+   "y2": 31.7
+  },
+  {
+   "label": "83\" OLED",
+   "x1": 93.95,
+   "y1": 31.5,
+   "x2": 100.05,
+   "y2": 31.8,
+   "nolabel": true
+  }
+ ],
+ "openings": [
+  {
+   "kind": "door",
+   "x1": 68.5,
+   "y1": 34,
+   "x2": 71.5,
+   "y2": 34
+  },
+  {
+   "kind": "pocket",
+   "x1": 70,
+   "y1": 27,
+   "x2": 73,
+   "y2": 27
+  },
+  {
+   "kind": "door",
+   "x1": 80.5,
+   "y1": 34,
+   "x2": 83,
+   "y2": 34
+  },
+  {
+   "kind": "glass",
+   "x1": 69,
+   "y1": 5,
+   "x2": 85,
+   "y2": 5
+  },
+  {
+   "kind": "glass",
+   "x1": 68,
+   "y1": 5.5,
+   "x2": 68,
+   "y2": 8
+  },
+  {
+   "kind": "opening",
+   "x1": 86,
+   "y1": 10.5,
+   "x2": 86,
+   "y2": 13.5
+  },
+  {
+   "kind": "pocket",
+   "x1": 86,
+   "y1": 5.3,
+   "x2": 86,
+   "y2": 7.8
+  },
+  {
+   "kind": "door",
+   "x1": 87,
+   "y1": 32,
+   "x2": 90,
+   "y2": 32
+  },
+  {
+   "kind": "window",
+   "x1": 112,
+   "y1": 22,
+   "x2": 112,
+   "y2": 28
+  }
+ ],
+ "route": null,
+ "erase": [
+  [
+   68,
+   28,
+   79,
+   34
+  ],
+  [
+   79,
+   28,
+   86,
+   34
+  ],
+  [
+   68.5,
+   5.3,
+   85.5,
+   6.2
+  ],
+  [
+   105.7,
+   16.3,
+   106.3,
+   31.7
+  ]
+ ],
+ "close": [
+  [
+   86.5,
+   15.8,
+   90.5,
+   16.2
+  ]
+ ]
+}

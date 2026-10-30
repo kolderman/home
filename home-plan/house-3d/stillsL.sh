@@ -1,0 +1,4 @@
+cd /tmp/claude-0/work/home-plan/house-3d
+mkdir -p stL2
+for q in "out:front:16.75 front-afternoon" "out:front:16.75&siding=sage front-sage" "out:front:19.2 front-dusk" "out:corner:16 front-corner" "out:back:16.5 back-pond" "out:falls:17.25 from-fire-pit" "out:falls:16&cam=37.5,4,-28,37.5,0,-42,60 falls" "out:aerial:15 aerial" "doll:great:14 dollhouse" "walk:kitchen:15 kitchen" "walk:lounge:15&cam=21,5.5,69.5,9,4.6,57,80 lounge" "walk:office:15&cam=83,5.5,21.5,70,4.5,13,85 office"; do set -- $q; timeout 900 node dbg.js "?still=$1" stL2/$2.png 1920 1080 > /dev/null 2>&1; convert stL2/$2.png -quality 88 stills/$2.jpg; echo done $2; done
+echo ALLDONE

@@ -1,0 +1,752 @@
+{
+ "picks": [
+  {
+   "name": "1. Back-door suite with a his walk-in behind the bed",
+   "pitch": "The foyer goes away, and the strip is split three ways. The powder room moves to the kitchen end, so it is the first door guests see. The middle 9 x 7 becomes a walk-in closet for Michael that sits right behind the headboard. The bedroom gets a small two-door entry at the far east end, out of sight of the kitchen and the stair.",
+   "how_you_enter_the_bedroom": "Walk east down the main hall past the stair to a solid 2'-8\" door at x 83.0-85.67 on y 34. It is hinged on the east side, so the leaf parks against the x 86 wall. That puts you in a 3.5 x 7 vestibule. A 2'-6\" door at x 83.2-85.7 on y 27 swings into the bedroom and parks along the east wall. You come in at the southeast corner, close to the closet/bath opening at x 86, y 10.5-13.5. Any line through both doors runs almost due north and lands east of the bed. From the kitchen or the stair, all you see is the vestibule's side wall. The two doors in a row also act as a sound lock. The walk-in opens off the vestibule through a cased opening, so it is private. The old pocket door at x 70-73 is removed and becomes solid wall.",
+   "what_powder_does": "Moves to x 68-73.5 (5.5 x 7). Its 2'-6\" door at x 70.6-73.1 on y 34 is hinged at the east jamb and swings in. This is the first door off the hall where the hall opens to the kitchen, so it is closer to the great room than it is today. The toilet backs onto the dining (wine) wall and the 42\" vanity is on the walk-in wall. The y 27 and x 68 walls are built as staggered-stud sound walls.",
+   "tradeoffs": "The suite door moves about 10 ft further east. That is the same main hall, not a new corridor, but the walk from the kitchen to the left side of the bed gets roughly 15-20 ft longer, so this works against Melissa's no-long-hallway rule more than any other pick. The bed and nightstands must shift 1 ft west (bed x 74-80.8), which centers the bed on the 16 ft glass and keeps the right nightstand clear of the new door. A toilet on the dining wall needs a quiet-flush model and sound insulation. The east end of the hall gets busy: the suite, the office, the laundry and the garage doors are all within about 8 ft. The house already has a 260 sf primary closet, so this is a second closet, not a needed one. What you gain is hanging clothes behind the headboard, which is the best sound buffer there is, plus short trips to the garage and laundry.",
+   "rooms": [
+    {
+     "name": "Powder",
+     "x1": 68,
+     "y1": 27,
+     "x2": 73.5,
+     "y2": 34
+    },
+    {
+     "name": "His walk-in",
+     "x1": 73.5,
+     "y1": 27,
+     "x2": 82.5,
+     "y2": 34
+    },
+    {
+     "name": "Suite vestibule",
+     "x1": 82.5,
+     "y1": 27,
+     "x2": 86,
+     "y2": 34
+    }
+   ],
+   "doors": [
+    [
+     70.6,
+     34,
+     2.5,
+     "h",
+     -1,
+     false
+    ],
+    [
+     83,
+     34,
+     2.67,
+     "h",
+     -1,
+     false
+    ],
+    [
+     83.2,
+     27,
+     2.5,
+     "h",
+     -1,
+     false
+    ]
+   ],
+   "openings": [
+    [
+     [
+      82.5,
+      29.25
+     ],
+     [
+      82.5,
+      31.75
+     ]
+    ]
+   ],
+   "pockets": [],
+   "fixtures": [
+    {
+     "label": "Powder: toilet (dining wall, sound-built)",
+     "x1": 68,
+     "y1": 31.25,
+     "x2": 70.4,
+     "y2": 32.75
+    },
+    {
+     "label": "Powder: vanity 42in x 21in",
+     "x1": 71.75,
+     "y1": 27.3,
+     "x2": 73.5,
+     "y2": 30.8
+    },
+    {
+     "label": "Walk-in: hanging + drawers 24in (behind headboard)",
+     "x1": 73.5,
+     "y1": 27,
+     "x2": 82.5,
+     "y2": 29
+    },
+    {
+     "label": "Walk-in: double-hang rods 24in",
+     "x1": 73.5,
+     "y1": 32,
+     "x2": 82.5,
+     "y2": 34
+    },
+    {
+     "label": "Walk-in: corner luggage/linen shelves 18in",
+     "x1": 73.5,
+     "y1": 29,
+     "x2": 75,
+     "y2": 32
+    },
+    {
+     "label": "Bedroom: king bed (shifted 1 ft west)",
+     "x1": 74,
+     "y1": 20,
+     "x2": 80.8,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 72.1,
+     "y1": 25.2,
+     "x2": 73.9,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 80.9,
+     "y1": 25.2,
+     "x2": 82.7,
+     "y2": 27
+    }
+   ]
+  },
+  {
+   "name": "2. Walk-through dressing room (smallest change)",
+   "pitch": "Keep the powder room where it is, and turn the foyer into a dressing room you pass through on the way to bed. It has hanging clothes, a drawer stack and a floor-to-ceiling linen and luggage tower. The hall door becomes a flush, trimless panel that reads as wall, so it no longer looks like a door off the main space. This is the cheapest option and keeps today's short route to bed.",
+   "how_you_enter_the_bedroom": "A flush 2'-8\" jib door at x 74.8-77.5 on y 34 has a self-closer and a full-length mirror on its inside face. It swings north into a 3 ft dressing aisle. Turn left, walk past the hanging clothes, and go through a 2'-6\" pocket door at x 69.0-71.5 on y 27, which slides east into the wall at x 71.5-74.0. The hall door and the pocket door are offset by about 3 ft, so no line from the hall, kitchen or stair passes through both. From the hall door you see the drawers and the tower, not the bed.",
+   "what_powder_does": "Unchanged. It stays at x 78-86 with its door at x 80.5-83 on y 34, the vanity on the x 78 wall, the toilet on the x 86 wall, and the shelf cabinet on y 27 as a sound buffer. No new plumbing.",
+   "tradeoffs": "There are still two doors side by side on the hall (dressing room and powder). The trimless door hides the dressing room's door but does not remove it. A staggered-stud wall is needed behind the headboard from x 74.3 to 78, and the drawers should be soft-close, because they sit right behind the sleeper. Nothing can be fixed to the pocket wall, so that stretch gets a loose valet bench. The light needs an occupancy sensor or a switch on the x 78 jamb. The room needs an air return so the hamper doesn't smell. The foyer's morning bar is lost.",
+   "rooms": [
+    {
+     "name": "Dressing room",
+     "x1": 68,
+     "y1": 27,
+     "x2": 78,
+     "y2": 34
+    },
+    {
+     "name": "Powder",
+     "x1": 78,
+     "y1": 27,
+     "x2": 86,
+     "y2": 34
+    }
+   ],
+   "doors": [
+    [
+     74.8,
+     34,
+     2.67,
+     "h",
+     -1,
+     false
+    ],
+    [
+     80.5,
+     34,
+     2.5,
+     "h",
+     -1,
+     true
+    ]
+   ],
+   "openings": [],
+   "pockets": [
+    [
+     [
+      69,
+      27
+     ],
+     [
+      71.5,
+      27
+     ]
+    ]
+   ],
+   "fixtures": [
+    {
+     "label": "Double-hang rods 24in (about 12 LF)",
+     "x1": 68.2,
+     "y1": 32,
+     "x2": 74.3,
+     "y2": 34
+    },
+    {
+     "label": "Drawers + hamper, soft-close 18in",
+     "x1": 74.5,
+     "y1": 27,
+     "x2": 76,
+     "y2": 28.5
+    },
+    {
+     "label": "Linen + luggage tower to ceiling 24in",
+     "x1": 76,
+     "y1": 27,
+     "x2": 78,
+     "y2": 31.2
+    },
+    {
+     "label": "Valet bench (loose, on pocket wall)",
+     "x1": 71.7,
+     "y1": 27.2,
+     "x2": 73.9,
+     "y2": 28.6
+    },
+    {
+     "label": "Powder: shelf cabinet (sound buffer)",
+     "x1": 80,
+     "y1": 27.2,
+     "x2": 85.6,
+     "y2": 28.4
+    },
+    {
+     "label": "Powder: vanity",
+     "x1": 78.2,
+     "y1": 28.6,
+     "x2": 79.8,
+     "y2": 32
+    },
+    {
+     "label": "Powder: toilet",
+     "x1": 83.6,
+     "y1": 31.25,
+     "x2": 86,
+     "y2": 32.75
+    }
+   ]
+  },
+  {
+   "name": "3. Morning room: makeup vanity and coffee bar",
+   "pitch": "Keep the powder room and the route, and make the foyer a room you use every morning. It gets a sit-down makeup vanity with a lit mirror, a jewelry armoire and a coffee bar with fridge drawers, lit by a solar tube. It is still the buffer between the hall and the bed, but now it has a daily job instead of being a hallway.",
+   "how_you_enter_the_bedroom": "Same as today: a 3'-0\" door off the hall at x 73-76 on y 34, then across the room to the 3'-0\" pocket door at x 70-73 on y 27, which slides into x 73-76. The doors are offset, so neither the kitchen nor the stair can see the bed through both. A full-length mirror goes on the inside face of the hall door. Standing back from it, you are outside the door swing.",
+   "what_powder_does": "Unchanged. It stays at x 78-86 with its door at x 80.5-83, the vanity on the x 78 wall, the toilet on the x 86 wall and the 14\" shelf cabinet on the headboard wall.",
+   "tradeoffs": "Michael asked whether there was something other than a foyer, and this still has a door off the hall. It changes what the space is for, not how you get in. Melissa already has a daylit vanity in the primary bath, so this is a second, sit-down spot. The room is 5-7 ft from the bed behind only a pocket door, so use a solid-core leaf with brush seals and a sound wall on y 27 at x 68.3-72.7, or she will wake whoever is still asleep. The hall door's open leaf passes about 1.5 in from the coffee bar, so it needs a door stop.",
+   "rooms": [
+    {
+     "name": "Morning room",
+     "x1": 68,
+     "y1": 27,
+     "x2": 78,
+     "y2": 34
+    },
+    {
+     "name": "Powder",
+     "x1": 78,
+     "y1": 27,
+     "x2": 86,
+     "y2": 34
+    }
+   ],
+   "doors": [
+    [
+     73,
+     34,
+     3,
+     "h",
+     -1,
+     true
+    ],
+    [
+     80.5,
+     34,
+     2.5,
+     "h",
+     -1,
+     true
+    ]
+   ],
+   "openings": [],
+   "pockets": [
+    [
+     [
+      70,
+      27
+     ],
+     [
+      73,
+      27
+     ]
+    ]
+   ],
+   "fixtures": [
+    {
+     "label": "Makeup vanity 48 x 21, lit mirror",
+     "x1": 68.2,
+     "y1": 29.5,
+     "x2": 69.95,
+     "y2": 33.5
+    },
+    {
+     "label": "Vanity stool",
+     "x1": 69.95,
+     "y1": 30.9,
+     "x2": 71.15,
+     "y2": 32.1
+    },
+    {
+     "label": "Jewelry armoire 36 x 20",
+     "x1": 76.1,
+     "y1": 27.3,
+     "x2": 77.8,
+     "y2": 30.3
+    },
+    {
+     "label": "Coffee bar 20in deep, fridge drawers",
+     "x1": 76.1,
+     "y1": 30.6,
+     "x2": 77.8,
+     "y2": 33.6
+    },
+    {
+     "label": "14in solar tube (ceiling)",
+     "x1": 72.4,
+     "y1": 29.9,
+     "x2": 73.6,
+     "y2": 31.1
+    },
+    {
+     "label": "Powder: shelf cabinet (sound buffer)",
+     "x1": 80,
+     "y1": 27.2,
+     "x2": 85.6,
+     "y2": 28.4
+    },
+    {
+     "label": "Powder: vanity",
+     "x1": 78.2,
+     "y1": 28.6,
+     "x2": 79.8,
+     "y2": 32
+    },
+    {
+     "label": "Powder: toilet",
+     "x1": 83.6,
+     "y1": 31.2,
+     "x2": 86,
+     "y2": 32.8
+    }
+   ]
+  },
+  {
+   "name": "4. Powder west, hall closet, open east entry",
+   "pitch": "No foyer and no extra door to the suite on the main hall. The powder room moves to the kitchen end, and the middle becomes a 7 x 7 walk-in closet for coats, linens, the vacuum and party overflow. The bedroom is reached through a cased opening at the east end with one door at the back, so from the hall it reads as an alcove, not a bedroom door.",
+   "how_you_enter_the_bedroom": "Walk through a 2'-10\" cased opening at x 82.6-85.4 on y 34 into a 4 x 7 entry. At the back, a 2'-9\" door at x 82.6-85.35 on y 27 swings into the bedroom and parks along the east wall. From the kitchen or the stair, the line through the opening is too shallow to reach y 27. Even standing in the opening, you look up the east wall toward the dresser and the glass. The bed (recentered at x 73.6-80.4) stays out of view.",
+   "what_powder_does": "7 x 7 at x 68-75. Its door at x 72-74.5 on y 34 is hinged on the east side, so the toilet can't be seen from the hall. The toilet backs onto the dining wall (sound-built). An 18\" deep vanity sits on the closet wall with 30\" clear in front, and a 12\" shelf cabinet lines the bed wall.",
+   "tradeoffs": "Only one door separates the bed from the garage and laundry end of the hall, where today there are two. The suite is now entered at the utility end, about 10 ft further from the kitchen than today. The under-stair closet across the hall already covers some of this storage, so the closet's value is real but modest. The bed must recenter 1.4 ft west, which also lines it up with the glass wall. The sound wall on y 27 needs to run from x 68.7 to 81.7.",
+   "rooms": [
+    {
+     "name": "Powder",
+     "x1": 68,
+     "y1": 27,
+     "x2": 75,
+     "y2": 34
+    },
+    {
+     "name": "Hall closet (coats, linens, vacuum)",
+     "x1": 75,
+     "y1": 27,
+     "x2": 82,
+     "y2": 34
+    },
+    {
+     "name": "Suite entry",
+     "x1": 82,
+     "y1": 27,
+     "x2": 86,
+     "y2": 34
+    }
+   ],
+   "doors": [
+    [
+     72,
+     34,
+     2.5,
+     "h",
+     -1,
+     false
+    ],
+    [
+     78.5,
+     34,
+     2.5,
+     "h",
+     -1,
+     true
+    ],
+    [
+     82.6,
+     27,
+     2.75,
+     "h",
+     -1,
+     false
+    ]
+   ],
+   "openings": [
+    [
+     [
+      82.6,
+      34
+     ],
+     [
+      85.4,
+      34
+     ]
+    ]
+   ],
+   "pockets": [],
+   "fixtures": [
+    {
+     "label": "Powder: toilet (dining wall)",
+     "x1": 68.25,
+     "y1": 29.3,
+     "x2": 70.75,
+     "y2": 31.7
+    },
+    {
+     "label": "Powder: vanity 18 x 42",
+     "x1": 73.25,
+     "y1": 27.6,
+     "x2": 74.75,
+     "y2": 31.1
+    },
+    {
+     "label": "Powder: 12in shelf cabinet",
+     "x1": 68.5,
+     "y1": 27.25,
+     "x2": 72.5,
+     "y2": 28.25
+    },
+    {
+     "label": "Closet: 24in coat rod + shelf (bed wall)",
+     "x1": 75.25,
+     "y1": 27.25,
+     "x2": 81.75,
+     "y2": 29.25
+    },
+    {
+     "label": "Closet: 12in shelves",
+     "x1": 75.25,
+     "y1": 29.5,
+     "x2": 76.25,
+     "y2": 33.75
+    },
+    {
+     "label": "Closet: 12in shelves",
+     "x1": 80.75,
+     "y1": 29.5,
+     "x2": 81.75,
+     "y2": 31.3
+    },
+    {
+     "label": "Bedroom: king bed (recentered)",
+     "x1": 73.6,
+     "y1": 20,
+     "x2": 80.4,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 71.7,
+     "y1": 25.2,
+     "x2": 73.5,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 80.5,
+     "y1": 25.2,
+     "x2": 82.3,
+     "y2": 27
+    }
+   ]
+  },
+  {
+   "name": "5. Wine room off the dining room (bold)",
+   "pitch": "Give the west 8 x 7 to the dining room as a walk-in wine and tasting room, reached through an opening cut in the middle of the wine wall. It has racks, a back bar and a beverage fridge. The powder room moves to the middle of the strip, and the bedroom gets a small two-door entry at the east end with a solar tube and an art wall.",
+   "how_you_enter_the_bedroom": "A 2'-10\" door at x 82.6-85.43 on y 34 is hinged on the east and parks along the x 86 wall. It opens into a 4 x 7 entry. A second 2'-10\" door at x 82.6-85.43 on y 27 swings into the bedroom along the east wall. From the kitchen and the stair no line reaches the bed. From right in front of the hall door you see, at most, the east nightstand. The hall door is solid so guests looking for the powder room don't wander in.",
+   "what_powder_does": "Moves to x 76-82 (6 x 7), with its door at x 77-79.5 off the hall. The vanity is on the wine-room wall with 30\" clear in front. The toilet is on the x 82 wall near the hall. A 14\" shelf cabinet lines the headboard wall as a buffer.",
+   "tradeoffs": "This is the biggest change. The dining wine wall is split into two runs (y 23-28.3 and y 31.7-33.5) to make a 3 ft cased opening. A tasting room is a social space, and it now backs onto the headboard, so y 27 needs a double-stud wall from x 68 to 82, and the ice maker and fridge go on the hall side. The bed shifts 1.5 ft west (x 73.5-80.3), which centers it on the glass. The suite door is about 10 ft further down the hall. This idea is mostly about the wine room. It does the least for the bedroom.",
+   "rooms": [
+    {
+     "name": "Wine room",
+     "x1": 68,
+     "y1": 27,
+     "x2": 76,
+     "y2": 34
+    },
+    {
+     "name": "Powder",
+     "x1": 76,
+     "y1": 27,
+     "x2": 82,
+     "y2": 34
+    },
+    {
+     "name": "Suite entry",
+     "x1": 82,
+     "y1": 27,
+     "x2": 86,
+     "y2": 34
+    }
+   ],
+   "doors": [
+    [
+     77,
+     34,
+     2.5,
+     "h",
+     -1,
+     true
+    ],
+    [
+     82.6,
+     34,
+     2.83,
+     "h",
+     -1,
+     false
+    ],
+    [
+     82.6,
+     27,
+     2.83,
+     "h",
+     -1,
+     false
+    ]
+   ],
+   "openings": [
+    [
+     [
+      68,
+      28.5
+     ],
+     [
+      68,
+      31.5
+     ]
+    ]
+   ],
+   "pockets": [],
+   "fixtures": [
+    {
+     "label": "Wine racks (quiet wall behind bed)",
+     "x1": 69.6,
+     "y1": 27.1,
+     "x2": 75.8,
+     "y2": 28.3
+    },
+    {
+     "label": "Back bar: sink + beverage fridge (hall side)",
+     "x1": 69,
+     "y1": 32,
+     "x2": 75.8,
+     "y2": 34
+    },
+    {
+     "label": "Powder: shelf cabinet (sound buffer)",
+     "x1": 77.7,
+     "y1": 27.1,
+     "x2": 82,
+     "y2": 28.3
+    },
+    {
+     "label": "Powder: vanity",
+     "x1": 76,
+     "y1": 28.4,
+     "x2": 77.6,
+     "y2": 30.9
+    },
+    {
+     "label": "Powder: toilet",
+     "x1": 79.5,
+     "y1": 31.5,
+     "x2": 82,
+     "y2": 33.1
+    },
+    {
+     "label": "Entry: 14in solar tube",
+     "x1": 82.8,
+     "y1": 28.4,
+     "x2": 84.2,
+     "y2": 29.8
+    },
+    {
+     "label": "Entry: art wall with picture lights",
+     "x1": 85.7,
+     "y1": 27.6,
+     "x2": 86,
+     "y2": 33.6
+    },
+    {
+     "label": "Bedroom: king bed (shifted 1.5 ft west)",
+     "x1": 73.5,
+     "y1": 20,
+     "x2": 80.3,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 71.6,
+     "y1": 25.2,
+     "x2": 73.4,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 80.4,
+     "y1": 25.2,
+     "x2": 82.2,
+     "y2": 27
+    }
+   ]
+  },
+  {
+   "name": "6. Guest bath with a vanity room, two-door suite entry",
+   "pitch": "Turn the strip into a real guest bath with the bedroom entry at the end. Guests step into a 7 x 7 vanity room with a towel cabinet. The toilet and a shower sit behind a pocket door, so the vanity room works as a powder room at a party and the whole thing works as a full bath for an overnight guest. The bedroom gets a two-door entry at the east end.",
+   "how_you_enter_the_bedroom": "A 3'-0\" door at x 82-85 on y 34, hinged on the east, opens into a 5 x 7 entry with a bench. A 2'-9\" door at x 82.6-85.35 on y 27 swings into the bedroom along the east wall, near the closet opening. With two doors in a row, kitchen noise and light stay out. With both open, you see only the east side of the room.",
+   "what_powder_does": "It becomes a two-room bath. The vanity room (x 74-81) has its door at x 75-77.5 off the hall and a 48\" vanity on its east wall. A 2'-6\" pocket door at x 74, y 28.2-30.7 (pocket at y 30.7-33.2) leads to the WC and shower room (x 68-74): toilet on the dining wall and a 60 x 34 glass shower on the hall wall.",
+   "tradeoffs": "This has the most plumbing and the highest cost: a shower drain cut into the slab, three wet walls and a ducted exhaust fan. The house already has baths for the guest rooms and the bonus room, so the shower mostly duplicates what exists. The toilet ends up on the dining wall about 3 ft from the west nightstand, so y 27 and x 68 need sound walls. The suite door moves about 10 ft east. The bed recenters 1.4 ft west.",
+   "rooms": [
+    {
+     "name": "Guest bath (WC + shower)",
+     "x1": 68,
+     "y1": 27,
+     "x2": 74,
+     "y2": 34
+    },
+    {
+     "name": "Vanity room",
+     "x1": 74,
+     "y1": 27,
+     "x2": 81,
+     "y2": 34
+    },
+    {
+     "name": "Suite entry",
+     "x1": 81,
+     "y1": 27,
+     "x2": 86,
+     "y2": 34
+    }
+   ],
+   "doors": [
+    [
+     75,
+     34,
+     2.5,
+     "h",
+     -1,
+     true
+    ],
+    [
+     82,
+     34,
+     3,
+     "h",
+     -1,
+     false
+    ],
+    [
+     82.6,
+     27,
+     2.75,
+     "h",
+     -1,
+     false
+    ]
+   ],
+   "openings": [],
+   "pockets": [
+    [
+     [
+      74,
+      28.2
+     ],
+     [
+      74,
+      30.7
+     ]
+    ]
+   ],
+   "fixtures": [
+    {
+     "label": "60 x 34 glass shower (door hinged at x 73)",
+     "x1": 68,
+     "y1": 31.2,
+     "x2": 73,
+     "y2": 34
+    },
+    {
+     "label": "Toilet (dining wall, sound-built)",
+     "x1": 68,
+     "y1": 28.25,
+     "x2": 70.5,
+     "y2": 30.65
+    },
+    {
+     "label": "48in vanity with sink",
+     "x1": 79.2,
+     "y1": 28,
+     "x2": 81,
+     "y2": 32
+    },
+    {
+     "label": "Towel/linen cabinet (sound buffer)",
+     "x1": 75.4,
+     "y1": 27.1,
+     "x2": 78.4,
+     "y2": 28.1
+    },
+    {
+     "label": "Entry bench",
+     "x1": 81.1,
+     "y1": 27.5,
+     "x2": 82.4,
+     "y2": 31
+    },
+    {
+     "label": "Bedroom: king bed (recentered)",
+     "x1": 73.6,
+     "y1": 20,
+     "x2": 80.4,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 71.7,
+     "y1": 25.2,
+     "x2": 73.5,
+     "y2": 27
+    },
+    {
+     "label": "Bedroom: nightstand",
+     "x1": 80.5,
+     "y1": 25.2,
+     "x2": 82.3,
+     "y2": 27
+    }
+   ]
+  }
+ ],
+ "recommended": "1. Back-door suite with a his walk-in behind the bed",
+ "why": "This is the one that answers Michael's question. The door at the kitchen end of the hall becomes the powder room, which is what guests should see first. The bedroom door moves out of sight of the kitchen and the stair. The middle of the strip becomes something useful that also helps the bedroom: hanging clothes behind the headboard are the best sound buffer you can get. The two doors in a row keep a sound lock between the hall and the bed. The bed recenters on the glass, and the suite sits right by the garage and laundry. The cost is honest: the suite door is about 10 ft further down the same hall. There is no new corridor, but Melissa should walk it in her head first. The toilet also moves onto the dining wall and needs sound insulation. If that extra walk is a dealbreaker for Melissa, choose pick 2, the walk-through dressing room. It keeps today's short route, adds real storage for the least money, and the trimless door makes the hall door read as wall."
+}

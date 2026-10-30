@@ -1,0 +1,343 @@
+[
+ {
+  "slug": "7",
+  "n": 7,
+  "label": "7 \u00b7 Open coffee and wine bar alcove",
+  "name": "Open coffee and wine bar alcove",
+  "pitch": "Take the wall off the hall side and the 10 x 7 space becomes a nook that belongs to the hall, like a widened bay. A 6 ft built-in counter on the back wall holds the coffee machine, a wine fridge and glass shelves above. It serves the kitchen, the dining room and the bedroom in the morning, and nobody has to open a door to use it.",
+  "how_you_enter_the_bedroom": "A 2'-10\" solid door in the back left corner of the nook (x 68.5-71.3), the same spot as now. It opens into the bedroom's west side, beside the dresser wall, so a glance through it from the hall or the kitchen lands on open floor, not on the bed. The bed stays centered on the 16 ft glass.",
+  "what_powder_does": "Stays exactly as drawn now: 8 x 7 at the east end, with its own 2'-6\" door off the hall, a furniture vanity, and a 14\" shelf cabinet on the headboard wall as a sound buffer.",
+  "tradeoffs": "The bedroom door now opens off a social spot, so someone making coffee is standing right outside it. Keep that door solid-core with a seal, and skip a sink in the counter: plumbing on the headboard wall carries noise. A wine fridge hums a little; pick a quiet one. You lose the enclosed foyer, but the hall reads 7 ft wider.",
+  "rooms": [
+   {
+    "name": "Bar nook",
+    "x1": 68,
+    "y1": 27,
+    "x2": 78,
+    "y2": 34,
+    "open": true,
+    "lab": [
+     -1.2,
+     2.2
+    ]
+   },
+   {
+    "name": "Powder",
+    "x1": 78,
+    "y1": 27,
+    "x2": 86,
+    "y2": 34
+   }
+  ],
+  "parts": [
+   [
+    [
+     68,
+     27
+    ],
+    [
+     68,
+     34
+    ]
+   ]
+  ],
+  "doors": [
+   [
+    68.5,
+    27,
+    2.83,
+    "h",
+    -1,
+    true
+   ],
+   [
+    80.5,
+    34,
+    2.5,
+    "h",
+    -1,
+    true
+   ]
+  ],
+  "fixtures": [
+   {
+    "x1": 71.8,
+    "y1": 27.15,
+    "x2": 75.9,
+    "y2": 29.1,
+    "label": "coffee bar"
+   },
+   {
+    "x1": 76,
+    "y1": 27.15,
+    "x2": 77.85,
+    "y2": 29.1,
+    "label": "wine"
+   },
+   {
+    "x1": 78.2,
+    "y1": 28.6,
+    "x2": 79.8,
+    "y2": 32,
+    "label": "vanity"
+   },
+   {
+    "x1": 84,
+    "y1": 31.2,
+    "x2": 85.8,
+    "y2": 33.8,
+    "label": "WC"
+   },
+   {
+    "x1": 80,
+    "y1": 27.2,
+    "x2": 85.6,
+    "y2": 28.4,
+    "label": "shelf (sound)"
+   }
+  ]
+ },
+ {
+  "slug": "8",
+  "n": 8,
+  "label": "8 \u00b7 Open library nook with a hidden bookcase door",
+  "name": "Library nook with a hidden bookcase door to the suite",
+  "tag": "Recommended",
+  "pitch": "The space opens to the hall through a wide cased opening and becomes a small library: floor-to-ceiling shelves across the back wall, a reading chair and a lamp. One section of the shelving is a pivot bookcase door into the primary bedroom. From the hall and the kitchen you see a wall of books, never a bedroom door.",
+  "how_you_enter_the_bedroom": "Push the left-hand shelf section (x 68.5-71.3). It is a 2'-10\" hinged bookcase door that swings into the bedroom on the west side, away from the bed. A full wall of books on the headboard wall is also the best sound buffer you can put there.",
+  "what_powder_does": "Stays exactly as drawn now: 8 x 7 at the east end, with its own 2'-6\" door off the hall, a furniture vanity, and a 14\" shelf cabinet on the headboard wall as a sound buffer.",
+  "tradeoffs": "A good bookcase door with real hardware runs about $2,500-4,500 installed and is heavier than a normal door. Shelves on the door have to stay light and use a lip so books don't slide. The cased opening (7'-6\" wide) leaves short wall stubs on each side, so the nook still feels like a room but is not walled in.",
+  "rooms": [
+   {
+    "name": "Library nook",
+    "x1": 68,
+    "y1": 27,
+    "x2": 78,
+    "y2": 34,
+    "open": true,
+    "lab": [
+     -1.2,
+     2.2
+    ]
+   },
+   {
+    "name": "Powder",
+    "x1": 78,
+    "y1": 27,
+    "x2": 86,
+    "y2": 34
+   }
+  ],
+  "parts": [
+   [
+    [
+     68,
+     27
+    ],
+    [
+     68,
+     34
+    ]
+   ],
+   [
+    [
+     68,
+     34
+    ],
+    [
+     69.5,
+     34
+    ]
+   ],
+   [
+    [
+     77,
+     34
+    ],
+    [
+     78,
+     34
+    ]
+   ]
+  ],
+  "openings": [
+   [
+    [
+     69.5,
+     34
+    ],
+    [
+     77,
+     34
+    ]
+   ]
+  ],
+  "doors": [
+   [
+    68.5,
+    27,
+    2.83,
+    "h",
+    -1,
+    true
+   ],
+   [
+    80.5,
+    34,
+    2.5,
+    "h",
+    -1,
+    true
+   ]
+  ],
+  "fixtures": [
+   {
+    "x1": 68.5,
+    "y1": 27.15,
+    "x2": 71.3,
+    "y2": 28.3,
+    "label": "book door"
+   },
+   {
+    "x1": 71.4,
+    "y1": 27.15,
+    "x2": 77.85,
+    "y2": 28.3,
+    "label": "built-in shelves"
+   },
+   {
+    "x1": 75,
+    "y1": 29.2,
+    "x2": 77.5,
+    "y2": 31.7,
+    "label": "chair"
+   },
+   {
+    "x1": 78.2,
+    "y1": 28.6,
+    "x2": 79.8,
+    "y2": 32,
+    "label": "vanity"
+   },
+   {
+    "x1": 84,
+    "y1": 31.2,
+    "x2": 85.8,
+    "y2": 33.8,
+    "label": "WC"
+   },
+   {
+    "x1": 80,
+    "y1": 27.2,
+    "x2": 85.6,
+    "y2": 28.4,
+    "label": "shelf (sound)"
+   }
+  ]
+ },
+ {
+  "slug": "9",
+  "n": 9,
+  "label": "9 \u00b7 Open household desk and charging niche",
+  "name": "Open household desk and charging niche",
+  "pitch": "An open nook off the hall with a built-in desk, a charging drawer, mail slots and a tall cabinet for the printer and gift wrap. It is the household's paperwork spot, close to the kitchen and to the garage, without taking over the office or the kitchen island.",
+  "how_you_enter_the_bedroom": "Same as idea 7: a 2'-10\" solid door in the back left corner (x 68.5-71.3) that opens on the bedroom's west side, so the bed is out of the line of sight.",
+  "what_powder_does": "Stays exactly as drawn now: 8 x 7 at the east end, with its own 2'-6\" door off the hall, a furniture vanity, and a 14\" shelf cabinet on the headboard wall as a sound buffer.",
+  "tradeoffs": "Desks collect clutter, and this one is in plain view of the hall. Upper doors or a roll-down tambour on the hutch keep it calm. It does overlap a bit with the drop zone by the garage door and with the office, so it earns its place only if you want a family desk separate from Michael's office.",
+  "rooms": [
+   {
+    "name": "Desk niche",
+    "x1": 68,
+    "y1": 27,
+    "x2": 78,
+    "y2": 34,
+    "open": true,
+    "lab": [
+     -1.2,
+     2.2
+    ]
+   },
+   {
+    "name": "Powder",
+    "x1": 78,
+    "y1": 27,
+    "x2": 86,
+    "y2": 34
+   }
+  ],
+  "parts": [
+   [
+    [
+     68,
+     27
+    ],
+    [
+     68,
+     34
+    ]
+   ]
+  ],
+  "doors": [
+   [
+    68.5,
+    27,
+    2.83,
+    "h",
+    -1,
+    true
+   ],
+   [
+    80.5,
+    34,
+    2.5,
+    "h",
+    -1,
+    true
+   ]
+  ],
+  "fixtures": [
+   {
+    "x1": 71.8,
+    "y1": 27.15,
+    "x2": 76.4,
+    "y2": 29.2,
+    "label": "desk + charging"
+   },
+   {
+    "x1": 76.5,
+    "y1": 27.15,
+    "x2": 77.85,
+    "y2": 33.2,
+    "label": "tall cabinet"
+   },
+   {
+    "x1": 73,
+    "y1": 29.5,
+    "x2": 75,
+    "y2": 31.3,
+    "label": "chair"
+   },
+   {
+    "x1": 78.2,
+    "y1": 28.6,
+    "x2": 79.8,
+    "y2": 32,
+    "label": "vanity"
+   },
+   {
+    "x1": 84,
+    "y1": 31.2,
+    "x2": 85.8,
+    "y2": 33.8,
+    "label": "WC"
+   },
+   {
+    "x1": 80,
+    "y1": 27.2,
+    "x2": 85.6,
+    "y2": 28.4,
+    "label": "shelf (sound)"
+   }
+  ]
+ }
+]

@@ -1,0 +1,3 @@
+cd /tmp/claude-0/work/home-plan/house-3d
+for q in "out:back:16.5 back-pond" "walk:kitchen:15 kitchen" "out:falls:16&cam=37.5,4,-28,37.5,0,-42,60 falls" "out:falls:17.25 from-fire-pit" "out:front:16.75 front-afternoon" "out:front:16.75&siding=sage front-sage" "out:front:19.2 front-dusk" "out:corner:16 front-corner" "out:aerial:15 aerial" "doll:great:14 dollhouse" "walk:lounge:15&cam=21,5.5,69.5,9,4.6,57,80 lounge" "walk:office:15&cam=83,5.5,21.5,70,4.5,13,85 office" "out:back:16.5&cam=36,9,14,46,-4,-14,60 porch-pond"; do set -- $q; node shot.js "?still=$1" st/$2.png 1920 1080 2>&1 | grep -v "GPU stall" | head -2; echo done $2; done
+echo ALLDONE

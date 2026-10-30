@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floor plan design review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ---- tokens: light on :root, dark for system dark mode or data-theme="dark" ---- */
+:root{color-scheme:light dark;--bg:#F8F6F1;--surface:#FFFFFF;--ink:#141A28;--body:#3B4455;--muted:#636A79;--rule:#E2DED4;--rule-strong:#C4BFB2;--accent:#7A5E27;--ok:#256C43;--warn:#7F5A0A;--bad:#A83A30}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C111C;--surface:#121928;--ink:#F1EDE3;--body:#C3C9D4;--muted:#9BA4B5;--rule:#242D40;--rule-strong:#3B4762;--accent:#C2A265;--ok:#6FBF8A;--warn:#D9B45B;--bad:#E58F83}}
+:root[data-theme="dark"]{--bg:#0C111C;--surface:#121928;--ink:#F1EDE3;--body:#C3C9D4;--muted:#9BA4B5;--rule:#242D40;--rule-strong:#3B4762;--accent:#C2A265;--ok:#6FBF8A;--warn:#D9B45B;--bad:#E58F83}
+
+/* ---- shared skeleton: identical in every house style ---- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page,var(--bg))}
+.doc{--lab:600 13px/1.4 var(--f-body);--r:8px;--pad-x:32px;--pad-top:64px;--pad-bottom:96px;
+  max-width:var(--measure,800px);margin:0 auto;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);
+  background:var(--bg);color:var(--body);font:400 var(--size,16px)/1.6 var(--f-body);
+  font-variant-numeric:lining-nums;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.doc a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+.doc :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.doc b,.doc strong{font-weight:600;color:var(--ink)}
+
+/* labels: one treatment for every small label in the document */
+.d-top,.d-stats .l,.doc th,.d-rows dt,.d-call>b,.d-panel>b,.d-tags span{font:var(--lab);letter-spacing:var(--lab-ls,0);text-transform:var(--lab-tt,none)}
+
+/* header */
+.d-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.d-type{color:var(--accent)} .d-date{color:var(--muted)}
+.d-title{font:var(--head-w,600) var(--title,40px)/var(--title-lh,1.1) var(--f-head);letter-spacing:var(--head-ls,-.018em);color:var(--ink);margin:14px 0 0;text-wrap:balance}
+.d-lead{font:400 var(--lead-size,1.15em)/1.5 var(--f-lead,var(--f-body));color:var(--body);margin:14px 0 0;text-wrap:pretty}
+
+/* headline figures */
+.d-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px;margin-top:28px;padding:16px 0;border-block:1px solid var(--rule)}
+.d-stats .l{color:var(--muted)}
+.d-stats .v{font:var(--num-w,600) var(--num-size,28px)/1.15 var(--f-num,var(--f-body));color:var(--ink);font-variant-numeric:tabular-nums lining-nums;letter-spacing:-.01em;margin-top:4px}
+.d-stats .s{font-size:.84em;line-height:1.4;color:var(--muted);margin-top:2px}
+
+/* text and sections */
+.d-p{margin:22px 0 0;text-wrap:pretty}
+.d-h2{font:var(--head-w,600) var(--h2,24px)/1.22 var(--f-head);letter-spacing:var(--head-ls,-.012em);color:var(--ink);margin:40px 0 14px;text-wrap:balance}
+.d-note{color:var(--muted);font-size:.92em;margin:-6px 0 14px}
+.d-rows{display:grid;grid-template-columns:minmax(72px,auto) 1fr;gap:10px 18px;margin:0}
+.d-rows dt{color:var(--muted);padding-top:.22em} .d-rows dd{margin:0}
+
+/* timeline: a time or step on the left, what happened on the right */
+.d-time{list-style:none;margin:0;padding:0}
+.d-time li{display:grid;grid-template-columns:minmax(72px,auto) 1fr;gap:4px 20px;padding:.62em 0;border-bottom:1px solid var(--rule)}
+.d-time li:last-child{border-bottom:0}
+.d-time .w{font:600 .93em/1.6 var(--f-tnum,var(--f-body));font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+
+/* tables */
+.d-tw{overflow-x:auto}
+.doc table{width:100%;border-collapse:collapse;font-size:.93em;line-height:1.4}
+.doc th{color:var(--muted);text-align:left;padding:0 12px 9px;border-bottom:1px solid var(--rule-strong);vertical-align:bottom}
+.doc td{padding:.68em 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+.doc th:first-child,.doc td:first-child{padding-left:0} .doc th:last-child,.doc td:last-child{padding-right:0}
+.doc td:first-child{color:var(--ink);font-weight:600}
+.doc .num{text-align:right;font-variant-numeric:tabular-nums lining-nums}
+.doc td.num{font-family:var(--f-tnum,inherit)}
+.doc tr.total td{font-weight:600;color:var(--ink);border-top:1px solid var(--rule-strong);border-bottom:0}
+
+/* status chips (meaning) and metadata tags (no meaning) */
+.ok{--c:var(--ok)} .warn{--c:var(--warn)} .bad{--c:var(--bad)} .neu{--c:var(--muted)}
+.chip{display:inline-flex;align-items:center;gap:.5em;font:600 .82em/1 var(--f-body);padding:.36em .75em .36em .6em;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 15%,transparent);white-space:nowrap;vertical-align:middle}
+.chip::before{content:"";width:.5em;height:.5em;border-radius:50%;background:var(--c)}
+.d-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.d-tags span{color:var(--muted);background:color-mix(in srgb,var(--muted) 15%,transparent);border-radius:calc(var(--r)/2.5);padding:3px 8px}
+
+/* scales: a bar for percentages, ten pips for 1-10 levels */
+.d-bar{display:grid;grid-template-columns:minmax(96px,34%) 1fr auto;gap:16px;align-items:center;padding:.56em 0;border-bottom:1px solid var(--rule)}
+.d-bar:last-child{border-bottom:0}
+.d-bar .n{color:var(--ink);font-weight:600;font-size:.93em;line-height:1.3}
+.d-bar .t{height:8px;border-radius:var(--bar-r,4px);background:var(--rule);position:relative;overflow:hidden}
+.d-bar .t i{position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--c,var(--muted));border-radius:inherit}
+.d-bar .x{font:600 .9em/1 var(--f-tnum,var(--f-body));font-variant-numeric:tabular-nums;color:var(--ink);min-width:3.2em;text-align:right}
+.pips{display:inline-flex;gap:3px}
+.pips i{width:.82em;height:.82em;border-radius:calc(var(--r)/3);background:var(--rule)}
+.pips i.on{background:var(--c,var(--muted))}
+
+/* matrix: color is relative to the row; the accent ring marks the reader's own cell */
+.d-matrix th:not(:first-child){text-align:center}
+.d-matrix td{padding:5px 4px;border-bottom:0;vertical-align:middle}
+.d-matrix td:first-child{padding-right:16px;white-space:nowrap}
+.d-matrix :is(th,td):last-child{padding-right:4px}
+.d-matrix td.c span{display:block;text-align:center;font-weight:600;font-variant-numeric:tabular-nums;border-radius:calc(var(--r)*.8);padding:.62em 0;color:var(--c);background:color-mix(in srgb,var(--c) 15%,transparent)}
+.d-matrix td.mine span{outline:2px solid var(--accent);outline-offset:2px}
+.d-legend{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:14px;font-size:.84em;color:var(--muted)}
+.d-legend span{display:inline-flex;align-items:center;gap:7px}
+.d-legend i{width:12px;height:12px;border-radius:3px;background:color-mix(in srgb,var(--c) 55%,transparent)}
+.d-legend i.mine{background:none;width:8px;height:8px;margin:0 4px;outline:2px solid var(--accent);outline-offset:2px}
+
+/* catalog cards */
+.d-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.d-card{background:var(--card,var(--surface));border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px}
+.d-card h3{font:600 1.02em/1.35 var(--f-body);color:var(--ink);margin:0}
+.d-card p{font-size:.9em;line-height:1.5;margin:8px 0 0}
+.d-card.wide{grid-column:1/-1}
+
+/* the one key callout, and status panels */
+.d-call{margin-top:28px;padding:16px 20px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 var(--r) var(--r) 0;line-height:1.5;color:var(--ink)}
+.d-call>b{display:block;color:var(--accent);margin-bottom:3px}
+.d-panel{margin-top:12px;padding:13px 18px;border-left:3px solid var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);border-radius:0 var(--r) var(--r) 0;font-size:.96em;line-height:1.5}
+.d-panel>b{display:block;color:var(--c);margin-bottom:2px}
+
+/* charts: inline SVG drawn from the same tokens */
+.d-fig{margin:0}
+.d-fig figcaption{font-weight:600;color:var(--ink);font-size:.95em;margin-bottom:10px}
+.d-fig figcaption span{display:block;font-weight:400;color:var(--muted);font-size:.92em}
+.d-fig svg{display:block;width:100%;height:auto;overflow:visible}
+.d-fig text{font:400 12px var(--f-body);fill:var(--muted);font-variant-numeric:tabular-nums}
+.c-grid{stroke:var(--rule)} .c-line{fill:none;stroke:var(--body);stroke-width:2.25;stroke-linejoin:round;stroke-linecap:round}
+.c-target{stroke:var(--muted);stroke-dasharray:4 4} .c-mark{fill:var(--accent);stroke:var(--accent)}
+.d-fig text.c-marklab{fill:var(--accent);font-weight:600} .d-fig text.c-strong{fill:var(--ink);font-weight:600}
+
+.d-foot{margin-top:40px;padding-top:14px;border-top:1px solid var(--rule);font-size:.84em;color:var(--muted)}
+
+/* ---- Ink & Brass ---- */
+.doc{--f-head:"Source Serif 4",Georgia,serif;--f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;--f-lead:var(--f-head);--size:17px;--title:44px;--lead-size:21px;--h2:27px;--num-size:30px;--lab:600 13.5px/1.4 var(--f-body);--measure:800px}
+.d-h2{border-top:1px solid var(--rule);padding-top:30px;margin-top:48px}
+.d-call{border-left:0;border-top:2px solid var(--accent);border-radius:0 0 10px 10px;padding:20px 24px 22px;font:400 1.16em/1.5 var(--f-head)}
+.d-card{border-radius:12px}
+
+/* ---- small screens and print ---- */
+@media (max-width:640px){
+  .doc{--pad-x:20px;--pad-top:36px;--pad-bottom:64px;margin:0;border-inline:0;border-radius:0}
+  .d-title{font-size:calc(var(--title,40px)*.78)}
+  .d-stats{grid-template-columns:1fr;gap:14px}
+  .d-cards{grid-template-columns:1fr}
+  .d-bar{grid-template-columns:1fr auto}.d-bar .n{grid-column:1/-1}
+}
+@media print{
+  :root{--bg:#F8F6F1;--surface:#FFFFFF;--ink:#141A28;--body:#3B4455;--muted:#636A79;--rule:#E2DED4;--rule-strong:#C4BFB2;--accent:#7A5E27;--ok:#256C43;--warn:#7F5A0A;--bad:#A83A30}
+  body{background:#fff}
+  .doc{--pad-x:0px;--pad-top:0px;--pad-bottom:0px;max-width:none;margin:0;border:0;border-radius:0;font-size:10.5pt}
+  .doc,.doc *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .d-card,.d-call,.d-panel,.d-bar,.d-fig,.doc tr{break-inside:avoid}
+  .d-h2{break-after:avoid}
+  .doc thead{display:table-header-group}
+  @page{margin:.65in}
+}
+</style>
+</head>
+<body>
+<main class="doc">
+  <header class="d-head">
+    <div class="d-top"><span class="d-type">New home build</span><span class="d-date">Draft G · Oct 26, 2026</span></div>
+    <h1 class="d-title">Floor plan design review</h1>
+    <p class="d-lead">The bones are good: a true single-level plan with the primary suite and the kids' wing at opposite ends, a scullery pantry, a lounge that gives the bedrooms their own living space, and porches on three sides. The problems are in the details: bedroom 3 is too shallow, the kitchen has no range and the island is pinched against the fridge wall, there is no mudroom or entry, and the plan has no mechanical room. All of these are fixable before the next draft.</p>
+  </header>
+
+  <div class="d-stats">
+    <div><div class="l">Heated area</div><div class="v">4,396 sf</div><div class="s">main floor, plus about 770 sf bonus above the garage</div></div>
+    <div><div class="l">Porches and outdoor rooms</div><div class="v">1,054 sf</div><div class="s">back, front and side porches plus the outdoor kitchen</div></div>
+    <div><div class="l">Length of the house</div><div class="v">113 ft</div><div class="s">primary bedroom to bedroom 3 is about a 95 ft walk</div></div>
+  </div>
+
+  <div class="d-call"><b>Bottom line</b><span>Keep the layout. Before the next draft, fix bedroom 3's depth, put a range and a mudroom on the plan, give the island 42 inches of clearance on every side, and find a home for the mechanical equipment.</span></div>
+
+  <h2 class="d-h2">How this was reviewed</h2>
+  <p class="d-p">I measured draft G against the standards architects and kitchen designers use (NKBA kitchen planning guidelines, the residential code minimums for rooms and stairs, universal design practice) and against the patterns that show up again and again in well-regarded single-level plans: a defined entry, a mudroom between the garage and the house, light on two sides of every main room, a scullery behind the kitchen, the primary suite separated from the other bedrooms, and a second living space for the kids' side. The reference points are Christopher Alexander's <i>A Pattern Language</i>, Sarah Susanka's <i>The Not So Big House</i>, and the best-selling farmhouse and ranch plans from Southern Living and similar plan houses, which share most of those moves. Dimensions are from the draft G generator, rounded.</p>
+
+  <h2 class="d-h2">What is working</h2>
+  <dl class="d-rows">
+    <dt>Zoning</dt><dd>The plan reads as three zones: the primary suite and office on the right, the great room in the middle, and the kids' or guest wing on the left behind the lounge. That is the layout most well-rated split-bedroom plans use. Each bedroom has its own bath, which is a real upgrade for guests and for resale.</dd>
+    <dt>The lounge</dt><dd>A second living room on the bedroom side is what Susanka calls an "away room." It lets the kids or guests have the TV on while the great room is quiet. Placing it between the great room and the bedrooms also puts a buffer between the two.</dd>
+    <dt>Scullery pantry</dt><dd>A walk-in pantry with a sink and counter behind the kitchen is one of the most requested features in new custom homes. The grocery hatch from the garage is a clever touch.</dd>
+    <dt>Light on two sides</dt><dd>The living room gets light from the front windows and the back porch wall. Alexander argues that rooms lit from two sides are the ones people gravitate to, and the main room has it.</dd>
+    <dt>Outdoor rooms</dt><dd>The back porch runs the full width of the living room and connects to the outdoor kitchen and dining. The side porch off the primary gives the owners a private outdoor space. That is three distinct outdoor rooms, which is more than most plans manage.</dd>
+    <dt>Single level</dt><dd>Everything you need day to day is on one floor. With 36-inch doors, a step-free garage entry and a curbless primary shower, this plan would carry you through any stage of life.</dd>
+  </dl>
+
+  <h2 class="d-h2">Issues to fix before the next draft</h2>
+  <p class="d-note">Ordered by how much they matter. The first four change how the house lives; the rest are refinements.</p>
+  <div class="d-panel bad"><b>Bedroom 3 is too shallow</b><span>After the 4-foot vestibule it is 17'6" wide by only 9'4" deep. A queen bed is 6'8" long, which leaves 2'8" to walk past it. Most plans use 12 by 12 feet as the floor for a secondary bedroom. Your wife already said the bedroom sizing was off and she would redraw the wing; aim for at least 12 feet of depth, and let bath 3 and the closet shrink to get there.</span></div>
+  <div class="d-panel bad"><b>No range or cooktop</b><span>The kitchen shows a sink, two dishwashers and a fridge but nothing to cook on. A range on the front wall would compete with the sink under the window; the natural spot is the back wall near the dining room, which also puts the vent hood on an exterior wall. Decide this now because it drives the hood, gas line and the whole work triangle.</span></div>
+  <div class="d-panel bad"><b>Island is too close to the fridge wall</b><span>The island's right edge is about 28 inches from the fridge and counter run. NKBA calls for 42 inches minimum, 48 if two people cook, and the fridge door needs room to swing. Either narrow the island to 4 feet or move it left; with 16 feet of kitchen width you can have a 4 by 10 foot island and 48 inches on both sides.</span></div>
+  <div class="d-panel bad"><b>No mudroom or drop zone</b><span>The garage door opens straight into the hall by the stairs. In nearly every well-rated plan there is a mudroom between the garage and the house with a bench, hooks and a closet. The original sketch had lockers on the garage's back wall. A 6 by 8 foot mudroom carved from the garage corner, or built-ins along the hall wall where the bench already is, would do it.</span></div>
+  <div class="d-panel warn"><b>No mechanical room</b><span>A 4,400 sf house needs two or three HVAC air handlers, a water heater or two, a water softener, the electrical panels and, with a server room, a structured wiring panel. Nothing on the plan holds them. Attic units are possible, but a 6 by 8 foot mechanical room off the garage or the laundry is cheaper to service and quieter. Plan it now, before the roof shape is set.</span></div>
+  <div class="d-panel warn"><b>Front door opens straight into the living room</b><span>There is no foyer, no coat closet and no place to set things down. Alexander calls this the "entrance transition": a short, defined threshold makes the big room feel bigger. Even a 6-foot-deep entry with a closet, marked by a lower ceiling or a change in floor, would fix it. The planter is a nice idea for that spot but it sits in the walking line from the door to the kitchen.</span></div>
+  <div class="d-panel warn"><b>Stairs are oversized</b><span>The stair box is 10'6" by 14'6". With 10-foot ceilings you need about 18 risers, which a U-shaped stair handles in roughly 7 feet wide by 11 feet long, landing included. Shrinking it gives the pantry and the under-stair storage back about 3 feet. Also, the stair lands in the hall by the garage door, which is the right place for a bonus room: it keeps the upstairs traffic out of the main rooms.</span></div>
+  <div class="d-panel warn"><b>Laundry shares a wall with the primary bedroom</b><span>The washer and dryer sit against the bedroom's foot wall. Insulate that wall, put the machines on the far side of the room, or swap the laundry and trash bump-in so the quieter space is against the bedroom.</span></div>
+  <div class="d-panel warn"><b>Grill against the office wall</b><span>The outdoor kitchen's grill sits on the back run of the U, against the house. Gas grills need clearance from combustible siding, and smoke will go in the office windows. Put the grill on the open leg of the U facing the yard, with the sink and counters against the house.</span></div>
+  <div class="d-panel warn"><b>Server room location</b><span>A rack throws heat and fan noise. It is on the bedroom hall with a wall shared with bedroom 3's TV wall. Keep it, but give it a dedicated mini-split or a supply and return, a solid-core door, and insulation in the walls. An alternative is a closet off the office, where the noise matters less and the structured wiring is likely to land anyway.</span></div>
+
+  <h2 class="d-h2">Room by room</h2>
+  <p class="d-note">Sizes are inside dimensions from draft G. The verdict is about the room as drawn, not about the idea.</p>
+  <div class="d-tw"><table>
+    <thead><tr><th>Room</th><th class="num">Size</th><th>Verdict</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Living</td><td class="num">28' × 28'6"</td><td><span class="chip ok">Good</span></td><td>800 sf with light on two sides. Big enough that it needs zoning: the sofa group, a reading corner, and the walk-through to the kitchen. A ceiling change or beams will help it read as rooms rather than a hall.</td></tr>
+      <tr><td>Kitchen</td><td class="num">16' × 25'</td><td><span class="chip bad">Fix</span></td><td>No range. Island too close to the fridge wall. The sink-to-fridge run is long; a prep sink on the island is worth considering since there is a second dishwasher.</td></tr>
+      <tr><td>Dining</td><td class="num">16' × 12'</td><td><span class="chip ok">Good</span></td><td>A 72-inch round table seats 8 and needs 12 feet clear. You have exactly that, so the buffet on the right wall is the only built-in the room can take.</td></tr>
+      <tr><td>Pantry</td><td class="num">10'6" × 10'</td><td><span class="chip ok">Good</span></td><td>Sink, counters and the hatch. Will gain floor space when the stair shrinks.</td></tr>
+      <tr><td>Office</td><td class="num">18' × 23' + nook</td><td><span class="chip warn">Watch</span></td><td>At over 500 sf it is bigger than the primary bedroom. Light comes from one side only. A window on the dining side, or a pair of French doors onto the outdoor kitchen, would change it. The powder room off the corridor keeps guests out of the office, which is right.</td></tr>
+      <tr><td>Primary bedroom</td><td class="num">20' × 16'</td><td><span class="chip ok">Good</span></td><td>Right size for a king bed, bench and TV wall. The slider to the side porch is the only daylight; a window on the back wall is blocked by the closet, so consider a high window or a transom over the closet wall.</td></tr>
+      <tr><td>Primary closet</td><td class="num">20' × 8'</td><td><span class="chip warn">Watch</span></td><td>It is the only route to the bath. That is a common pattern, but moisture from the shower ends up in the closet. Keep the bath door, add a good exhaust fan, and think about whether you want to pass through clothes to reach the toilet at night.</td></tr>
+      <tr><td>Primary bath</td><td class="num">20' × 10'6"</td><td><span class="chip ok">Good</span></td><td>Tub, separate shower, WC and three sinks. Make the shower curbless and 5 feet in its short direction if you want it to work for a lifetime.</td></tr>
+      <tr><td>Laundry</td><td class="num">15' × 8'</td><td><span class="chip warn">Watch</span></td><td>Generous. Shares a wall with the bedroom. Consider a sink and a folding counter, and whether the outside door is worth the wall space.</td></tr>
+      <tr><td>Bedroom 2</td><td class="num">24' × 13'10"</td><td><span class="chip warn">Watch</span></td><td>Long and narrow, lit from one side. Fine as a bedroom, oversized as a secondary. Trading 4 feet of its width to bedroom 3 would balance the wing.</td></tr>
+      <tr><td>Bedroom 3</td><td class="num">17'6" × 9'4"</td><td><span class="chip bad">Fix</span></td><td>Too shallow. Needs 12 feet.</td></tr>
+      <tr><td>Baths 2 and 3</td><td class="num">13' × 10'7", 11'5" × 7'4"</td><td><span class="chip ok">Good</span></td><td>Both en suite, both with a shower. Bath 3 is sized like a hotel bath, which is fine. Bath 2 is larger than it needs to be.</td></tr>
+      <tr><td>Lounge</td><td class="num">17' × 18'</td><td><span class="chip ok">Good</span></td><td>Right size, light on two sides, window seat. Its only entry is from the living room, which is what you want for a buffer.</td></tr>
+      <tr><td>Garage</td><td class="num">34'6" × 26'6"</td><td><span class="chip ok">Good</span></td><td>26'6" deep handles a crew-cab long-bed truck (about 22 feet). Make the door 8 feet tall for a lifted truck. The single 20'9" door is the cleanest look. Loses a corner if a mudroom goes in.</td></tr>
+      <tr><td>Porches</td><td class="num">1,054 sf</td><td><span class="chip ok">Good</span></td><td>The 14-foot-deep back porch will shade the living room's back windows, which is good in Louisiana summers and worth checking against which way the house faces.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="d-h2">Against the patterns good plans share</h2>
+  <div class="d-tw"><table>
+    <thead><tr><th>Pattern</th><th>In this plan</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>Split bedrooms</td><td>Primary on the right, others on the left, great room between</td><td><span class="chip ok">Yes</span></td></tr>
+      <tr><td>Entrance transition</td><td>Door opens into the living room</td><td><span class="chip bad">No</span></td></tr>
+      <tr><td>Mudroom from the garage</td><td>Garage opens to the hall</td><td><span class="chip bad">No</span></td></tr>
+      <tr><td>Scullery or working pantry</td><td>Pantry with sink behind the kitchen</td><td><span class="chip ok">Yes</span></td></tr>
+      <tr><td>Away room</td><td>The lounge</td><td><span class="chip ok">Yes</span></td></tr>
+      <tr><td>Light on two sides</td><td>Living, lounge, dining: yes. Kitchen, office, bedroom 2, primary: no</td><td><span class="chip warn">Partly</span></td></tr>
+      <tr><td>Indoor-outdoor connection</td><td>Three porches and an outdoor kitchen</td><td><span class="chip ok">Yes</span></td></tr>
+      <tr><td>Laundry near the bedrooms</td><td>Next to the primary, far from bedrooms 2 and 3</td><td><span class="chip warn">Partly</span></td></tr>
+      <tr><td>Short daily paths</td><td>Garage to kitchen through the pantry, garage to primary in 30 feet</td><td><span class="chip ok">Yes</span></td></tr>
+      <tr><td>Ceiling variety</td><td>Undecided; 10 ft everywhere so far</td><td><span class="chip neu">Open</span></td></tr>
+      <tr><td>Aging in place</td><td>Single level; door widths, thresholds and shower not yet specified</td><td><span class="chip neu">Open</span></td></tr>
+      <tr><td>Mechanical and storage</td><td>No mechanical room, no coat closet, no linen closet</td><td><span class="chip bad">No</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="d-h2">Things to decide that the sketch cannot</h2>
+  <dl class="d-rows">
+    <dt>Orientation</dt><dd>Which way is north decides everything about the porches. The back porch and pond side want to face north or east so the living room gets soft light and the porch stays usable in the afternoon. If the back faces west, the 14-foot porch depth is doing real work and the primary's side porch will be hot.</dd>
+    <dt>Ceilings</dt><dd>Use height to mark the rooms. Ten feet in the bedrooms and office, twelve or a vault in the living room, and a dropped ceiling of nine feet or so at the entry and in the pantry. Susanka's point is that the tall room feels taller when you pass through a low one to get there.</dd>
+    <dt>Roof</dt><dd>A 113-foot-long single-story house with a bonus room over the garage will have a complicated roof. The primary suite and office wing step back 10 feet from the main block, which helps. Ask the designer to study a simple gable over the main block with the wings as hips or lower gables, and to keep the bonus room's roof inside the garage's footprint.</dd>
+    <dt>Storage</dt><dd>There is no coat closet, no linen closet and no broom closet on the plan. Add a coat closet at the entry, a linen closet in the bedroom hall (it was there in draft F before we removed it) and a utility closet near the laundry.</dd>
+    <dt>Upstairs</dt><dd>If the bonus room will ever be a bedroom, it needs an egress window and a bath, which option 1 has. Rough in the plumbing even if you finish it later.</dd>
+    <dt>Budget</dt><dd>At roughly 4,400 heated square feet plus 770 sf of bonus space, a 900 sf garage and 1,050 sf of porches, this is a large custom house. Square footage, not finish level, is the biggest lever on cost. Bedroom 2, the office and bath 2 are the three rooms that could lose area without losing anything.</dd>
+  </dl>
+
+  <h2 class="d-h2">Suggested checklist for the next draft</h2>
+  <ol class="d-time">
+    <li><span class="w">1</span><span>Redraw the bedroom wing with bedroom 3 at least 12 feet deep. Take the depth from bath 3 and the closet, or the width from bedroom 2.</span></li>
+    <li><span class="w">2</span><span>Place the range and hood, and narrow or shift the island to get 42 inches on every side.</span></li>
+    <li><span class="w">3</span><span>Add a mudroom or built-in drop zone between the garage door and the hall.</span></li>
+    <li><span class="w">4</span><span>Add a mechanical room, a coat closet at the entry and a linen closet in the bedroom hall.</span></li>
+    <li><span class="w">5</span><span>Tighten the stair to about 7 by 11 feet and give the space back to the pantry.</span></li>
+    <li><span class="w">6</span><span>Mark the entry with a dropped ceiling or a floor change, and move the planter out of the path.</span></li>
+    <li><span class="w">7</span><span>Move the grill to the open side of the outdoor kitchen.</span></li>
+    <li><span class="w">8</span><span>Settle north, and then decide ceiling heights and porch depths with the sun in mind.</span></li>
+  </ol>
+
+  <footer class="d-foot">Reviewed against draft G of the floor plan (Oct 26, 2026), the NKBA kitchen planning guidelines, residential code minimums for rooms and stairs, and the patterns in A Pattern Language, The Not So Big House and widely published single-level plans. Dimensions come from the draft G generator and are rounded to the nearest inch; the plan itself is a sketch, not construction documents.</footer>
+</main>
+
+</body>
+</html>
